@@ -55,25 +55,12 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     font-size: 2.5rem;
     font-weight: 700;
     padding: 0 0 10px 0;
-    /* border-bottom: 1px solid #eee; */
 }
 .bayan__body {
 }
 .bbody {
     transition-duration: 1s;
 }
-
-
-/* .one-section:hover .row__close_first{
-    display: block;
-    transition: all 1s;
-} */
-
-/* .one-section:focus .one-section__wrap_first{
-    display: none;
-    
-} */
-
 .bbody__first {
 }
 .one-section {
@@ -83,17 +70,11 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 
 .one-section__row {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #eee;
-    line-height: 2;
-    color: darkblue; */
+
 }
-/* .one-section__row_first {
-    color: black;
-} */
+
 .row {
+    min-height: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,36 +107,21 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     
 }
 .one-section__img {
-    border: 1px solid transparent;
-    border-radius: 1rem;
     width: 15rem;
     height: 15rem;
     margin: 0 auto;
     padding: 0rem 0 1rem 0;
- 
-
-    
 }
 .one-section__img img{
-   
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-/* .one-section__img_first {
-    display: block;
-
-    
-} */
 .one-section__wrap{
     display: none;
     opacity: 1;
  
 }
-
-/* .one-section__wrap_first{
-    display: block;
-} */
 @media(hover:hover){
     .one-section:hover .row__close{
         display: block;
@@ -228,18 +194,26 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         line-height: 1;
         
     }
-    .bbody {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
+
     .row{
         padding: 0.7rem 0 0 0;
         border-top: 1px solid gray;
     }
-    .one-section{
-        
-        height: 5rem;
+    .bbody{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
     }
+  
+}
+
+@media(max-width:400px){
+    .row__title {
+        font-size: 1.4rem;
+        line-height: 1;
+        
+    }
+
 }
 
