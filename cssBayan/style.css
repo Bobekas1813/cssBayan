@@ -61,18 +61,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 .bbody {
     transition-duration: 1s;
 }
-.bbody:hover .one-section{
-    cursor: pointer;
-    color: black;
-    transition: all 1s;
-}
-.bbody:hover  .row__open{
-    display: block;
-}
-.one-section:hover  .row__open  {
-    opacity: 0;
-    
-}
+
 
 /* .one-section:hover .row__close_first{
     display: block;
@@ -88,32 +77,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 .one-section {
     color: darkblue;
-    transition-duration: all 1s;
-}
-.one-section:active {
-    background-color: aquamarine;
-    transition: all 0.5s;
-    color: chocolate;
-}
-.one-section:active .one-section__wrap{
-    transition: all 0.5s;
-    opacity: 0.5;
-}
-.one-section:focus .one-section__wrap{
-    display: block;
-    
-}
-.one-section:focus .row__close{
-    display: block;
-    transition:  all 0.5s;
-    
-}
-.one-section:focus .row__open{
-    opacity: 0;
-    
-}
-.one-section:focus {
-    color: black;
     
 }
 
@@ -134,24 +97,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     align-items: center;
     border-top: 1px solid #eee;
     line-height: 2;
-    /* color: darkblue; */
-    
 }
-.row:hover + .one-section__wrap{
-    
-    display: block;
-    transition-duration: 1s;
-    
-}
-.row:hover + .row__open{
-    display: none; 
-    
-
-}
-.row:hover .row__close{
-    display: block;
-}
-
 .row__title {
     font-size: 1.7rem;
     font-weight: 600;
@@ -183,6 +129,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     height: 15rem;
     margin: 0 auto;
     padding: 0 0 1rem 0;
+ 
 
     
 }
@@ -198,8 +145,86 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 } */
 .one-section__wrap{
     display: none;
-    transition-duration: 1s;
+    opacity: 1;
+ 
 }
+
 /* .one-section__wrap_first{
     display: block;
 } */
+@media(hover:hover){
+    .row:hover .row__close{
+        display: block;
+    }
+    .row:hover + .row__open{
+        display: none; 
+    }
+    .row:hover + .one-section__wrap{
+        display: block;
+       opacity: 1;
+       transition: all 5s;
+    }
+ 
+    .bbody:hover .one-section{
+        cursor: pointer;
+        color: black;
+        transition: all 1s;
+    }
+    .bbody:hover  .row__open{
+        display: block;
+    }
+    .one-section:hover  .row__open  {
+        opacity: 0;
+    }
+}
+
+.one-section:active .row {
+    
+    transition: all 0.5s;
+    color: darkblue;
+
+}
+.one-section:active .one-section__wrap{
+    transition: all 0.5s;
+    opacity: 0.5;
+}
+.one-section:focus .one-section__wrap{
+    display: block;
+    
+}
+.one-section:focus .row__close{
+    display: block;
+    transition:  all 0.5s;
+    
+}
+.one-section:focus .row__open{
+    opacity: 0;
+    
+}
+.one-section:focus {
+    color: black;
+    
+}
+@media(max-width:990px){
+    .row__title {
+        font-size: 2rem;
+        line-height: 2;
+        
+    }
+}
+@media(max-width:615px){
+    .row__title {
+        font-size: 2.1rem;
+        line-height: 1;
+        
+    }
+    .bbody {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .row{
+        border-top: 1px solid gray;
+    }
+}
+
